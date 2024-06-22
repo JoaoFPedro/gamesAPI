@@ -1,12 +1,12 @@
-// src/server.ts
-import express from 'express';
-import bodyParser from 'body-parser';
+//Imports
+
 import gamesRoute from './routes/gamesRoutes';
+
+const express = require('express')
 
 const app = express();
 const port = 3000;
 
-app.use(bodyParser.json());
 app.use('/api', gamesRoute);
 
 app.listen(port, () => {
